@@ -2,7 +2,7 @@
   <GlobalSettings>
     <CollectionProperty Name="RecognizedWords">
       <Value>listbox</Value>
-      <Value>Magenic</Value>
+      <Value>Fermium.io</Value>
       <Value>tfs</Value>
     </CollectionProperty>
   </GlobalSettings>
@@ -38,8 +38,8 @@
         </Rule>
       </Rules>
       <AnalyzerSettings>
-        <StringProperty Name="CompanyName">Magenic Technologies</StringProperty>
-        <StringProperty Name="Copyright">Copyright 2014 Magenic Technologies, All rights Reserved</StringProperty>
+        <StringProperty Name="CompanyName">Fermium.io</StringProperty>
+        <StringProperty Name="Copyright">Copyright 2015 Jacob Ferm, All rights Reserved</StringProperty>
       </AnalyzerSettings>
     </Analyzer>
     <Analyzer AnalyzerId="StyleCop.CSharp.NamingRules">

@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------
-// <copyright file="Fields.cs" company="Magenic Technologies">
-//  Copyright 2014 Magenic Technologies, All rights Reserved
+// <copyright file="Fields.cs" company="Fermium.io">
+//  Copyright 2015 Jacob Ferm, All rights Reserved
 // </copyright>
 // <summary>Object to store field data</summary>
 //-----------------------------------------------------
