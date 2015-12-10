@@ -5,8 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExportBugs"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="Export Bugs" Height="457" Width="649" Background="Gray" ResizeMode="CanMinimize">
+    <Grid Name="MainWindowGrid">
+        <Image Name="AboutImage" Source="/Images/Question.png" Height="50" Width="50" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,5,5,0" MouseUp="AboutImage_MouseUp"/>
+        <StackPanel>
+            <Grid>
+                <TextBlock Name="tfsProjectTextBlock" HorizontalAlignment="Left" Margin="45,25,0,0" Width="275" Background="LightGray" TextWrapping="Wrap" Height="20" Text="" VerticalAlignment="Top" Padding="0" TextAlignment="Center"/>
+                <Button Name="tfsProjectButton" Content="TFS Project" HorizontalAlignment="Left" Margin="350,25,0,0" VerticalAlignment="Top" Height="20" Width="100" Click="tfsProjectButton_Click"/>
+            </Grid>
+            <Grid>
+                <TextBlock Name="fileLocationTextBlock" HorizontalAlignment="Left" Margin="45,25,0,0" Width="275" Background="LightGray" TextWrapping="Wrap" Height="20" Text="" VerticalAlignment="Top"/>
+                <Button Name="fileLocationButton" Content="Folder Location" HorizontalAlignment="Left" Margin="350,25,0,0" VerticalAlignment="Top" Height="20" Width="100" Click="fileLocationButton_Click"/>
+            </Grid>
+            <ListBox Name="fieldsListBox" ItemsSource="{Binding}" Height="220" Width="275" HorizontalAlignment="Left" Margin="45,25,0,0" SelectionMode="Extended">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding FieldName}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+
+            </ListBox>
+            <TextBlock TextWrapping="Wrap" Text="* Use Ctrl to select multiple. They will be added in the order selected" Width="275" HorizontalAlignment="Left" Margin="45,0"/>
+            <CheckBox Name="ExportAttachemntsCheckbox" Content="Export Attachments?" Margin="45,15,0,0"/>
+            <Label Name="WorkItemsLabel" Content="Work Items 0/0" HorizontalAlignment="Left" Visibility="Collapsed"/>
+
+        </StackPanel>
+        <Button Content="Export" Name="ExportButton"  Height="20" Width="100" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,25,25" Click="ExportButton_Click"/>
+        <ProgressBar Name="progressBar" Height="10" Width="300" HorizontalAlignment="Center" VerticalAlignment="Bottom" Visibility="Collapsed"/>
     </Grid>
 </Window>
